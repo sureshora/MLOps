@@ -1,0 +1,70 @@
+D:\Project_Folder\ML>cd project1
+
+D:\Project_Folder\ML\Project1>git init
+Reinitialized existing Git repository in D:/Project_Folder/ML/Project1/.git/
+
+D:\Project_Folder\ML\Project1>python -m venv
+usage: venv [-h] [--system-site-packages] [--symlinks | --copies] [--clear] [--upgrade] [--without-pip]
+            [--prompt PROMPT] [--upgrade-deps]
+            ENV_DIR [ENV_DIR ...]
+venv: error: the following arguments are required: ENV_DIR
+
+D:\Project_Folder\ML\Project1>git init
+Reinitialized existing Git repository in D:/Project_Folder/ML/Project1/.git/
+
+D:\Project_Folder\ML\Project1>python -m venv
+usage: venv [-h] [--system-site-packages] [--symlinks | --copies] [--clear] [--upgrade] [--without-pip]
+            [--prompt PROMPT] [--upgrade-deps]
+            ENV_DIR [ENV_DIR ...]
+venv: error: the following arguments are required: ENV_DIR
+
+D:\Project_Folder\ML\Project1>
+D:\Project_Folder\ML\Project1>python -m venv venv
+
+D:\Project_Folder\ML\Project1>venv\scripts\activate
+
+(venv) D:\Project_Folder\ML\Project1>pip install -r requirements.txt
+Collecting scikit-learn==0.24.2 (from -r requirements.txt (line 1))
+  Downloading scikit-learn-0.24.2.tar.gz (7.5 MB)
+     ---------------------------------------- 7.5/7.5 MB 4.6 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [20 lines of output]
+      <string>:17: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+      Partial import of sklearn during the build process.
+      Traceback (most recent call last):
+        File "D:\Project_Folder\ML\Project1\venv\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 353, in <module>
+          main()
+        File "D:\Project_Folder\ML\Project1\venv\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "D:\Project_Folder\ML\Project1\venv\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 149, in prepare_metadata_for_build_wheel
+          return hook(metadata_directory, config_settings)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\thula\AppData\Local\Temp\pip-build-env-9vyuf2b0\overlay\Lib\site-packages\setuptools\build_meta.py", line 366, in prepare_metadata_for_build_wheel
+          self.run_setup()
+        File "C:\Users\thula\AppData\Local\Temp\pip-build-env-9vyuf2b0\overlay\Lib\site-packages\setuptools\build_meta.py", line 480, in run_setup
+          super(_BuildMetaLegacyBackend, self).run_setup(setup_script=setup_script)
+        File "C:\Users\thula\AppData\Local\Temp\pip-build-env-9vyuf2b0\overlay\Lib\site-packages\setuptools\build_meta.py", line 311, in run_setup
+          exec(code, locals())
+        File "<string>", line 301, in <module>
+        File "<string>", line 293, in setup_package
+      ModuleNotFoundError: No module named 'numpy.distutils'
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+[notice] A new release of pip is available: 23.2.1 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip

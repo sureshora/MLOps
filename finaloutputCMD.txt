@@ -1,0 +1,253 @@
+D:\Project_Folder>cd ml
+
+D:\Project_Folder\ML>cd project1
+
+D:\Project_Folder\ML\Project1>git init
+Reinitialized existing Git repository in D:/Project_Folder/ML/Project1/.git/
+
+D:\Project_Folder\ML\Project1>python -m venv
+usage: venv [-h] [--system-site-packages] [--symlinks | --copies] [--clear] [--upgrade] [--without-pip]
+            [--prompt PROMPT] [--upgrade-deps]
+            ENV_DIR [ENV_DIR ...]
+venv: error: the following arguments are required: ENV_DIR
+
+D:\Project_Folder\ML\Project1>git init
+Reinitialized existing Git repository in D:/Project_Folder/ML/Project1/.git/
+
+D:\Project_Folder\ML\Project1>python -m venv
+usage: venv [-h] [--system-site-packages] [--symlinks | --copies] [--clear] [--upgrade] [--without-pip]
+            [--prompt PROMPT] [--upgrade-deps]
+            ENV_DIR [ENV_DIR ...]
+venv: error: the following arguments are required: ENV_DIR
+
+D:\Project_Folder\ML\Project1>
+D:\Project_Folder\ML\Project1>python -m venv venv
+
+D:\Project_Folder\ML\Project1>venv\scripts\activate
+
+(venv) D:\Project_Folder\ML\Project1>pip install -r requirements.txt
+Collecting scikit-learn==0.24.2 (from -r requirements.txt (line 1))
+  Downloading scikit-learn-0.24.2.tar.gz (7.5 MB)
+     ---------------------------------------- 7.5/7.5 MB 4.6 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [20 lines of output]
+      <string>:17: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+      Partial import of sklearn during the build process.
+      Traceback (most recent call last):
+        File "D:\Project_Folder\ML\Project1\venv\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 353, in <module>
+          main()
+        File "D:\Project_Folder\ML\Project1\venv\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "D:\Project_Folder\ML\Project1\venv\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 149, in prepare_metadata_for_build_wheel
+          return hook(metadata_directory, config_settings)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\thula\AppData\Local\Temp\pip-build-env-9vyuf2b0\overlay\Lib\site-packages\setuptools\build_meta.py", line 366, in prepare_metadata_for_build_wheel
+          self.run_setup()
+        File "C:\Users\thula\AppData\Local\Temp\pip-build-env-9vyuf2b0\overlay\Lib\site-packages\setuptools\build_meta.py", line 480, in run_setup
+          super(_BuildMetaLegacyBackend, self).run_setup(setup_script=setup_script)
+        File "C:\Users\thula\AppData\Local\Temp\pip-build-env-9vyuf2b0\overlay\Lib\site-packages\setuptools\build_meta.py", line 311, in run_setup
+          exec(code, locals())
+        File "<string>", line 301, in <module>
+        File "<string>", line 293, in setup_package
+      ModuleNotFoundError: No module named 'numpy.distutils'
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+[notice] A new release of pip is available: 23.2.1 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(venv) D:\Project_Folder\ML\Project1>make install
+'make' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) D:\Project_Folder\ML\Project1>python -m pytest tests/
+D:\Project_Folder\ML\Project1\venv\Scripts\python.exe: No module named pytest
+
+(venv) D:\Project_Folder\ML\Project1>pip install pytest
+Collecting pytest
+  Obtaining dependency information for pytest from https://files.pythonhosted.org/packages/f3/8c/f16efd81ca8e293b2cc78f111190a79ee539d0d5d36ccd49975cb3beac60/pytest-7.4.3-py3-none-any.whl.metadata
+  Downloading pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting iniconfig (from pytest)
+  Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting packaging (from pytest)
+  Obtaining dependency information for packaging from https://files.pythonhosted.org/packages/ec/1a/610693ac4ee14fcdf2d9bf3c493370e4f2ef7ae2e19217d7a237ff42367d/packaging-23.2-py3-none-any.whl.metadata
+  Downloading packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pluggy<2.0,>=0.12 (from pytest)
+  Obtaining dependency information for pluggy<2.0,>=0.12 from https://files.pythonhosted.org/packages/05/b8/42ed91898d4784546c5f06c60506400548db3f7a4b3fb441cba4e5c17952/pluggy-1.3.0-py3-none-any.whl.metadata
+  Downloading pluggy-1.3.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting colorama (from pytest)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading pytest-7.4.3-py3-none-any.whl (325 kB)
+   ---------------------------------------- 325.1/325.1 kB 3.3 MB/s eta 0:00:00
+Downloading pluggy-1.3.0-py3-none-any.whl (18 kB)
+Downloading packaging-23.2-py3-none-any.whl (53 kB)
+   ---------------------------------------- 53.0/53.0 kB 910.0 kB/s eta 0:00:00
+Installing collected packages: pluggy, packaging, iniconfig, colorama, pytest
+Successfully installed colorama-0.4.6 iniconfig-2.0.0 packaging-23.2 pluggy-1.3.0 pytest-7.4.3
+
+[notice] A new release of pip is available: 23.2.1 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(venv) D:\Project_Folder\ML\Project1>python -m pytest tests/
+=============================================== test session starts ================================================
+platform win32 -- Python 3.12.0, pytest-7.4.3, pluggy-1.3.0
+rootdir: D:\Project_Folder\ML\Project1
+collected 0 items / 1 error
+
+====================================================== ERRORS ======================================================
+_______________________________________ ERROR collecting tests/test_model.py _______________________________________
+ImportError while importing test module 'D:\Project_Folder\ML\Project1\tests\test_model.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests\test_model.py:3: in <module>
+    from scripts.train_model import train_model
+scripts\train_model.py:4: in <module>
+    from sklearn import datasets
+E   ModuleNotFoundError: No module named 'sklearn'
+============================================= short test summary info ==============================================
+ERROR tests/test_model.py
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+================================================= 1 error in 0.28s =================================================
+
+(venv) D:\Project_Folder\ML\Project1>pip install scikit-learn
+Collecting scikit-learn
+  Obtaining dependency information for scikit-learn from https://files.pythonhosted.org/packages/fe/6b/db949ed5ac367987b1f250f070f340b7715d22f0c9c965bdf07de6ca75a3/scikit_learn-1.3.2-cp312-cp312-win_amd64.whl.metadata
+  Downloading scikit_learn-1.3.2-cp312-cp312-win_amd64.whl.metadata (11 kB)
+Collecting numpy<2.0,>=1.17.3 (from scikit-learn)
+  Obtaining dependency information for numpy<2.0,>=1.17.3 from https://files.pythonhosted.org/packages/28/75/3b679b41713bb60e2e8f6e2f87be72c971c9e718b1c17b8f8749240ddca8/numpy-1.26.2-cp312-cp312-win_amd64.whl.metadata
+  Using cached numpy-1.26.2-cp312-cp312-win_amd64.whl.metadata (61 kB)
+Collecting scipy>=1.5.0 (from scikit-learn)
+  Obtaining dependency information for scipy>=1.5.0 from https://files.pythonhosted.org/packages/c6/a1/357e4cd43af2748e1e0407ae0e9a5ea8aaaa6b702833c81be11670dcbad8/scipy-1.11.4-cp312-cp312-win_amd64.whl.metadata
+  Using cached scipy-1.11.4-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Collecting joblib>=1.1.1 (from scikit-learn)
+  Obtaining dependency information for joblib>=1.1.1 from https://files.pythonhosted.org/packages/10/40/d551139c85db202f1f384ba8bcf96aca2f329440a844f924c8a0040b6d02/joblib-1.3.2-py3-none-any.whl.metadata
+  Downloading joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl>=2.0.0 (from scikit-learn)
+  Obtaining dependency information for threadpoolctl>=2.0.0 from https://files.pythonhosted.org/packages/81/12/fd4dea011af9d69e1cad05c75f3f7202cdcbeac9b712eea58ca779a72865/threadpoolctl-3.2.0-py3-none-any.whl.metadata
+  Downloading threadpoolctl-3.2.0-py3-none-any.whl.metadata (10.0 kB)
+Downloading scikit_learn-1.3.2-cp312-cp312-win_amd64.whl (9.1 MB)
+   ---------------------------------------- 9.1/9.1 MB 3.8 MB/s eta 0:00:00
+Downloading joblib-1.3.2-py3-none-any.whl (302 kB)
+   ---------------------------------------- 302.2/302.2 kB 2.7 MB/s eta 0:00:00
+Using cached numpy-1.26.2-cp312-cp312-win_amd64.whl (15.5 MB)
+Using cached scipy-1.11.4-cp312-cp312-win_amd64.whl (43.7 MB)
+Downloading threadpoolctl-3.2.0-py3-none-any.whl (15 kB)
+Installing collected packages: threadpoolctl, numpy, joblib, scipy, scikit-learn
+Successfully installed joblib-1.3.2 numpy-1.26.2 scikit-learn-1.3.2 scipy-1.11.4 threadpoolctl-3.2.0
+
+[notice] A new release of pip is available: 23.2.1 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(venv) D:\Project_Folder\ML\Project1>python -m pytest tests/
+=============================================== test session starts ================================================
+platform win32 -- Python 3.12.0, pytest-7.4.3, pluggy-1.3.0
+rootdir: D:\Project_Folder\ML\Project1
+collected 1 item
+
+tests\test_model.py .                                                                                         [100%]
+
+================================================ 1 passed in 3.29s =================================================
+
+(venv) D:\Project_Folder\ML\Project1>python scripts/train_model.py
+
+(venv) D:\Project_Folder\ML\Project1>python scripts/deploy_model.py
+Traceback (most recent call last):
+  File "D:\Project_Folder\ML\Project1\scripts\deploy_model.py", line 10, in <module>
+    from flask import Flask, request, jsonify
+ModuleNotFoundError: No module named 'flask'
+
+(venv) D:\Project_Folder\ML\Project1>pip install Flask
+Collecting Flask
+  Obtaining dependency information for Flask from https://files.pythonhosted.org/packages/36/42/015c23096649b908c809c69388a805a571a3bea44362fe87e33fc3afa01f/flask-3.0.0-py3-none-any.whl.metadata
+  Using cached flask-3.0.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting Werkzeug>=3.0.0 (from Flask)
+  Obtaining dependency information for Werkzeug>=3.0.0 from https://files.pythonhosted.org/packages/c3/fc/254c3e9b5feb89ff5b9076a23218dafbc99c96ac5941e900b71206e6313b/werkzeug-3.0.1-py3-none-any.whl.metadata
+  Using cached werkzeug-3.0.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting Jinja2>=3.1.2 (from Flask)
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting itsdangerous>=2.1.2 (from Flask)
+  Using cached itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting click>=8.1.3 (from Flask)
+  Obtaining dependency information for click>=8.1.3 from https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl.metadata
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting blinker>=1.6.2 (from Flask)
+  Obtaining dependency information for blinker>=1.6.2 from https://files.pythonhosted.org/packages/fa/2a/7f3714cbc6356a0efec525ce7a0613d581072ed6eb53eb7b9754f33db807/blinker-1.7.0-py3-none-any.whl.metadata
+  Using cached blinker-1.7.0-py3-none-any.whl.metadata (1.9 kB)
+Requirement already satisfied: colorama in d:\project_folder\ml\project1\venv\lib\site-packages (from click>=8.1.3->Flask) (0.4.6)
+Collecting MarkupSafe>=2.0 (from Jinja2>=3.1.2->Flask)
+  Obtaining dependency information for MarkupSafe>=2.0 from https://files.pythonhosted.org/packages/44/44/dbaf65876e258facd65f586dde158387ab89963e7f2235551afc9c2e24c2/MarkupSafe-2.1.3-cp312-cp312-win_amd64.whl.metadata
+  Using cached MarkupSafe-2.1.3-cp312-cp312-win_amd64.whl.metadata (3.0 kB)
+Using cached flask-3.0.0-py3-none-any.whl (99 kB)
+Using cached blinker-1.7.0-py3-none-any.whl (13 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached werkzeug-3.0.1-py3-none-any.whl (226 kB)
+Using cached MarkupSafe-2.1.3-cp312-cp312-win_amd64.whl (16 kB)
+Installing collected packages: MarkupSafe, itsdangerous, click, blinker, Werkzeug, Jinja2, Flask
+Successfully installed Flask-3.0.0 Jinja2-3.1.2 MarkupSafe-2.1.3 Werkzeug-3.0.1 blinker-1.7.0 click-8.1.7 itsdangerous-2.1.2
+
+[notice] A new release of pip is available: 23.2.1 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(venv) D:\Project_Folder\ML\Project1>python scripts/deploy_model.py
+Traceback (most recent call last):
+  File "D:\Project_Folder\ML\Project1\scripts\deploy_model.py", line 16, in <module>
+    model = joblib.load("path/to/your/trained/model.pkl")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project_Folder\ML\Project1\venv\Lib\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'path/to/your/trained/model.pkl'
+
+(venv) D:\Project_Folder\ML\Project1>python scripts/deploy_model.py
+Traceback (most recent call last):
+  File "D:\Project_Folder\ML\Project1\scripts\deploy_model.py", line 14, in <module>
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project_Folder\ML\Project1\venv\Lib\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Project_Folder\\ML\\Project1\\scripts\\model\\model.pkl'
+
+(venv) D:\Project_Folder\ML\Project1>python scripts/deploy_model.py
+ * Serving Flask app 'deploy_model'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+127.0.0.1 - - [16/Dec/2023 21:46:35] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [16/Dec/2023 21:46:37] "GET / HTTP/1.1" 404 -
+192.168.1.5 - - [16/Dec/2023 21:46:55] "GET / HTTP/1.1" 404 -
+192.168.1.5 - - [16/Dec/2023 21:46:56] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.5 - - [16/Dec/2023 21:47:00] "GET / HTTP/1.1" 404 -
+192.168.1.5 - - [16/Dec/2023 21:47:28] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [16/Dec/2023 21:47:57] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [16/Dec/2023 21:48:03] "GET / HTTP/1.1" 404 -
+
+(venv) D:\Project_Folder\ML\Project1>python scripts/deploy_model.py
+ * Serving Flask app 'deploy_model'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+127.0.0.1 - - [16/Dec/2023 21:50:23] "GET / HTTP/1.1" 200 -
